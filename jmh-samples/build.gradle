@@ -1,0 +1,16 @@
+apply plugin: 'net.ltgt.apt'
+
+dependencies {
+    compile "org.jctools:jctools-core:$jctoolsVersion"
+    compile "org.openjdk.jmh:jmh-core:$jmhVersion"
+    apt "org.openjdk.jmh:jmh-generator-annprocess:$jmhVersion"
+    compileOnly "org.openjdk.jmh:jmh-generator-annprocess:$jmhVersion"
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.openjdk.jmh.Main'
+        )
+    }
+}

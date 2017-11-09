@@ -1,0 +1,5 @@
+rootProject.name = 'BaselOne2017'
+
+include 'jol-samples'
+include 'jmh-samples'
+include 'jcstress-samples'

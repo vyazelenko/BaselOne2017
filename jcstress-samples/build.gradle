@@ -1,0 +1,19 @@
+apply plugin: 'net.ltgt.apt'
+
+dependencies {
+    compile "org.openjdk.jcstress:jcstress-core:$jcstressVersion"
+    apt "org.openjdk.jcstress:jcstress-core:$jcstressVersion"
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.openjdk.jcstress.Main'
+        )
+    }
+}
+
+shadowJar {
+    classifier = null
+    version    = null
+}
